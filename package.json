@@ -1,0 +1,31 @@
+{
+  "name": "currency-rate-api",
+  "version": "1.0.0",
+  "description": "a service integration to a public API and exposing a RESTful endpoint. The endpoint will accept requests and returns a modified response schema from the integrated API.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donaldcrane/currency-rate-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donaldcrane/currency-rate-api/issues"
+  },
+  "homepage": "https://github.com/donaldcrane/currency-rate-api#readme",
+  "dependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
+    "@babel/runtime": "^7.12.5",
+    "babel-eslint": "^10.1.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
