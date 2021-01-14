@@ -4,7 +4,11 @@
   "description": "a service integration to a public API and exposing a RESTful endpoint. The endpoint will accept requests and returns a modified response schema from the integrated API.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "npm rm -rf build && npm run build-babel",
+    "build-babel": "babel -d ./build ./src -s",
+    "build": "npm run clean && npm run build-babel",
+    "start": "npm run build && node ./build/app.js",
+    "start-dev": " nodemon --exec babel-node ./src/app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +21,11 @@
   },
   "homepage": "https://github.com/donaldcrane/currency-rate-api#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
     "@babel/node": "^7.12.10",
@@ -25,7 +34,6 @@
     "@babel/register": "^7.12.10",
     "@babel/runtime": "^7.12.5",
     "babel-eslint": "^10.1.0",
-    "express": "^4.17.1",
     "nodemon": "^2.0.7"
   }
 }
